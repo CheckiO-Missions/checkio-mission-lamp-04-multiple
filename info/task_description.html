@@ -1,8 +1,17 @@
 <!-- Describe task in general -->
 
+<p><i>
+    In the 4th mission of the series more light bulbs are added.
+</i></p>
+
 <p>
-    Sum two passed ints
+    You still must determine how long the room will be lit during the observation period between start_watching and end_watching. But now we have more than one light bulb. This means that in the light bulb switching array can now also be passed the number of the light bulb, the button of which is being pressed.
 </p>
+
+<p>Each element of the button clicking array can be either a datetime object (which means the time when the first button was pressed) or a tuple of 2 elements (where the first elements is a datetime object, the time the button was pressed), and the second is the number of the light bulb, the button of which is being pressed.</p>
+
+<p><i>If the passed array will only consist of datetime elements, then we have only one light bulb and the function should work the same way as in the previous mission of the series.</i></p>
+
 
 <p style="text-align: center;">
     <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 83px"/>
@@ -14,7 +23,7 @@
 </p>
 
 <p>
-    <strong>Output: </strong> Int. 
+    <strong>Output: </strong> An int. 
 </p>
 
 
