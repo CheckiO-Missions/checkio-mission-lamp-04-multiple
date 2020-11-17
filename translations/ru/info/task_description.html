@@ -19,11 +19,11 @@
 
 <!-- Explain input and output values -->
 <p>
-    <strong>Input: </strong> Two arguments. Both are ints.
+    <strong>Input: </strong> Три аргумента и только первый обязательный. Первый – {% if is_js %}an array of Date objects (вместо Date может быть [Date, number]){% else %}a list of datetime objects(вместо datetime может быть [datetime, int]){% endif %}, а второй и третий –  {% if is_js %}the Date objects{% else %}the datetime objects{% endif %}.
 </p>
 
 <p>
-    <strong>Output: </strong> An int. 
+    <strong>Output: </strong> Количество секунд как integer. 
 </p>
 
 

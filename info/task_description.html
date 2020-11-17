@@ -17,13 +17,12 @@
     <img  title="example" src="{{MEDIA}}composition.gif" alt="example" style="max-height: 400px"/>
 </p>
 
-<!-- Explain input and output values -->
 <p>
-    <strong>Input: </strong> Two arguments. Both are ints.
+    <strong>Input: </strong> Three arguments and only the first one is required. The first one is {% if is_js %}an array of Date objects (instead of Date object there can be an array of two Date and number){% else %}a list of datetime objects (instead of datetime object there can be a tuple of two datetime and int){% endif %}, the second and the third ones are {% if is_js %}the Date objects{% else %}the datetime objects{% endif %}.
 </p>
 
 <p>
-    <strong>Output: </strong> An int. 
+    <strong>Output: </strong> A number of seconds as an integer. 
 </p>
 
 
