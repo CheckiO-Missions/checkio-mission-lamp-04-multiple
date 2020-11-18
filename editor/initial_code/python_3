@@ -1,7 +1,7 @@
 from datetime import datetime
-from typing import List, Optional, Union
+from typing import List, Optional, Union, Tuple
 
-def sum_light(els: List[Union[datetime,tuple[datetime, int]]],
+def sum_light(els: List[Union[datetime, Tuple[datetime, int]]],
         start_watching: Optional[datetime] = None,
         end_watching: Optional[datetime] = None) -> int:
     """
