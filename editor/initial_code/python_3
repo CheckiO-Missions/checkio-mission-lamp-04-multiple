@@ -13,10 +13,19 @@ def sum_light(els: List[Union[datetime, Tuple[datetime, int]]],
 if __name__ == '__main__':
     print("Example:")
 
+    print(sum_light(els=[
+        (datetime(2015, 1, 12, 10, 0, 10), 3),
+        datetime(2015, 1, 12, 10, 0, 20),
+        (datetime(2015, 1, 12, 10, 0, 30), 3),
+        (datetime(2015, 1, 12, 10, 0, 30), 2),
+        datetime(2015, 1, 12, 10, 0, 40),
+        (datetime(2015, 1, 12, 10, 0, 50), 2),
+    ], start_watching=datetime(2015, 1, 12, 10, 0, 0), end_watching=datetime(2015, 1, 12, 10, 1, 0)))
+
     assert sum_light([
         datetime(2015, 1, 12, 10, 0, 0),
-        datetime(2015, 1, 12, 10, 0, 10),
         (datetime(2015, 1, 12, 10, 0, 0), 2),
+        datetime(2015, 1, 12, 10, 0, 10),
         (datetime(2015, 1, 12, 10, 1, 0), 2),
     ]) == 60
 
@@ -56,8 +65,8 @@ if __name__ == '__main__':
 
     assert sum_light([
         datetime(2015, 1, 12, 10, 0, 0),
-        datetime(2015, 1, 12, 10, 0, 10),
         (datetime(2015, 1, 12, 10, 0, 0), 2),
+        datetime(2015, 1, 12, 10, 0, 10),
         (datetime(2015, 1, 12, 10, 1, 0), 2),
     ], datetime(2015, 1, 12, 10, 0, 50)) == 10
     
@@ -120,22 +129,22 @@ if __name__ == '__main__':
     
     assert sum_light([
         datetime(2015, 1, 12, 10, 0, 0),
-        datetime(2015, 1, 12, 10, 0, 10),
         (datetime(2015, 1, 12, 10, 0, 0), 2),
+        datetime(2015, 1, 12, 10, 0, 10),
         (datetime(2015, 1, 12, 10, 1, 0), 2),
     ], datetime(2015, 1, 12, 10, 0, 30), datetime(2015, 1, 12, 10, 1, 0)) == 30
     
     assert sum_light([
         datetime(2015, 1, 12, 10, 0, 0),
-        datetime(2015, 1, 12, 10, 0, 10),
         (datetime(2015, 1, 12, 10, 0, 0), 2),
+        datetime(2015, 1, 12, 10, 0, 10),
         (datetime(2015, 1, 12, 10, 1, 0), 2),
     ], datetime(2015, 1, 12, 10, 0, 20), datetime(2015, 1, 12, 10, 1, 0)) == 40
     
     assert sum_light([
         datetime(2015, 1, 12, 10, 0, 0),
-        datetime(2015, 1, 12, 10, 0, 10),
         (datetime(2015, 1, 12, 10, 0, 0), 2),
+        datetime(2015, 1, 12, 10, 0, 10),
     ], datetime(2015, 1, 12, 10, 0, 0), datetime(2015, 1, 12, 10, 0, 30)) == 30
     
     assert sum_light([

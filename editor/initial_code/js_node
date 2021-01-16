@@ -9,15 +9,15 @@ function sumLight(els: Array<Date | [Date, number]>, startWatching?: Date, endWa
 console.log("Example:");
 console.log(sumLight([
     new Date(2015, 1, 12, 10, 0, 0),
-    new Date(2015, 1, 12, 10, 0, 10),
     [new Date(2015, 1, 12, 10, 0, 0), 2],
+    new Date(2015, 1, 12, 10, 0, 10),
     [new Date(2015, 1, 12, 10, 1, 0), 2],
 ]));
 
 assert.equal(sumLight([
     new Date(2015, 1, 12, 10, 0, 0),
-    new Date(2015, 1, 12, 10, 0, 10),
     [new Date(2015, 1, 12, 10, 0, 0), 2],
+    new Date(2015, 1, 12, 10, 0, 10),
     [new Date(2015, 1, 12, 10, 1, 0), 2],
 ]), 60);
 
@@ -57,8 +57,8 @@ assert.equal(sumLight([
 
 assert.equal(sumLight([
     new Date(2015, 1, 12, 10, 0, 0),
-    new Date(2015, 1, 12, 10, 0, 10),
     [new Date(2015, 1, 12, 10, 0, 0), 2],
+    new Date(2015, 1, 12, 10, 0, 10),
     [new Date(2015, 1, 12, 10, 1, 0), 2],
 ], new Date(2015, 1, 12, 10, 0, 50)), 10);
 
